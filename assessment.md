@@ -19,7 +19,7 @@ Assessment
 
 - Use the technology stack (programming language, framework) indicated by your professor.
 
-- [Version controlled](class/version-control.md): branch, commits and pull requests.
+- [Version controlled](class/2-development-environment-setup/03-version-control.md): branch, commits and pull requests.
 
 - Issue, branch, pull request and commits should be connected.
 
