@@ -5,7 +5,7 @@ Classes
 
 1. [First Meeting](class/1-introduction/01-first-meeting.md)
 
-2. [Applications with Rich Interfaces](class/1-introduction/02-software-quality.md)
+2. [Applications with Rich Interfaces](class/1-introduction/02-applications-with-rich-interfaces.md)
 
 ### Development Environment Setup 
 
