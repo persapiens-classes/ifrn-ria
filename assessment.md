@@ -23,8 +23,8 @@ Assessment
 
 - Issue, branch, pull request and commits should be connected.
 
-- Tests should run ok.
+- [Unit Tests](class/2-development-environment-setup/05-unit-tests.md) should run ok.
 
-- Pipeline should build ok including with tests.
+- [Pipeline](class/2-development-environment-setup/06-pipeline.md) should build ok including with tests.
 
 - Explain the submission to the professor. 
