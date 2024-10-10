@@ -10,8 +10,8 @@ The sections [Objectives](#objectives) and [Contents](#contents) is derived from
 
 ## [Objectives](objectives.md)
 
-## [Contents](contents.md)
-
 ## [Assessment](assessment.md)
 
 ## [Communication](communication.md)
+
+## [Contents](contents.md)
