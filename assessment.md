@@ -1,0 +1,30 @@
+Assessment
+====
+
+- [Work with pais.](https://au.indeed.com/career-advice/interviewing/how-do-you-ensure-you-work-well-in-a-team)
+
+- Work with projects.
+
+- Continuous assessment. Weekly. All practical tasks.
+
+- Some challenges.
+
+- Grade is the average of the bimester's tasks grades. 
+
+- Individual grade.
+
+- Final test with a traditional theoretical exam.
+
+## Task Submission
+
+- Use the technology stack (programming language, framework) indicated by your professor.
+
+- [Version controlled](class/version-control.md): branch, commits and pull requests.
+
+- Issue, branch, pull request and commits should be connected.
+
+- Tests should run ok.
+
+- Pipeline should build ok including with tests.
+
+- Explain the submission to the professor. 
