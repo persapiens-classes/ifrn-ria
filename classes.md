@@ -17,6 +17,6 @@ Classes
 
 ### Javascript
 
-6. [Unit Tests](class/3-javascript/06-unit-tests.md)
+6. [Unit Test](class/3-javascript/06-unit-test.md)
 
 ### Angular
