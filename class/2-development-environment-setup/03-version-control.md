@@ -28,4 +28,4 @@ When you finish the implementation in the branch, create a PR from your branch.
 
 Merge the PR into the main branch.
 
-Examples: Introducing team definition, Fixing typos, Fixing some open issues.
+Examples: [Adding README](https://github.com/persapiens-classes/ifrn-ria-example/issues/1), Introducing team definition, Fixing typos, Fixing some open issues.
