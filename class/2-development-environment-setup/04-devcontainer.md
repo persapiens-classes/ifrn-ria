@@ -27,7 +27,7 @@
 
 - Create one pull request for your project according to [Task Submission Guidelines.](../../assessment.md#task-submission)
 
-- Create a devcontainer.json to configure a dev container for your project.
+- Create a devcontainer.json to configure a dev container for your project. See the [example](https://github.com/persapiens-classes/ifrn-ria-example/issues/3).
 
 - Start the dev container successfully.
 
