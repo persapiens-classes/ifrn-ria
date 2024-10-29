@@ -20,7 +20,7 @@ According to [Semaphoreci](https://semaphoreci.com/blog/cicd-pipeline)
 
 Let's use [Github Actions](https://docs.github.com/en/actions) to create a build pipeline of our project.
 
-Hands on with [RIA Example Project.](https://github.com/persapiens-classes/ifrn-ria-example/issues/5)
+Hands on with [RIA Example Project.](https://github.com/persapiens-classes/ifrn-ria-example/issues/15)
 
 ## :construction_worker: Task
 
