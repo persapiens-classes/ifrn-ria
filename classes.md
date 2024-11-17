@@ -17,6 +17,8 @@ Classes
 
 6. [CI/CD Pipeline](class/2-development-environment-setup/06-pipeline.md)
 
-### Javascript
+7. [TypeScript Setup](class/2-development-environment-setup/07-typescript.md)
+
+### TypeScript
 
 ### Angular
