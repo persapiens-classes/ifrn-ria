@@ -29,11 +29,11 @@ Classes
 
 10. [Data Binding](class/4-angular/10-data-binding.md)
 
-11. [Directive]()
+11. [Directive]
 
 12. [Components]
 
-13. [UI Components]()
+13. [UI Components](class/4-angular/13-ui-components.md)
 
 14. [Service]
 
