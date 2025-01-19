@@ -22,3 +22,27 @@ Classes
 ### TypeScript
 
 ### Angular
+
+8. [Basics](class/4-angular/08-basics.md)
+
+9. [Create Project using PrimeNg](class/4-angular/09-create-project.md)
+
+10. [Data Binding](class/4-angular/10-data-binding.md)
+
+11. [Directive]()
+
+12. [Components]
+
+13. [UI Components]()
+
+14. [Service]
+
+15. [Routes]
+
+16. [Forms]
+
+17. [HttpClient]
+
+18. [State Management]
+
+:trophy: This angular classes was initially donated by [Professor Alessandro Sousa](https://github.com/alessandrojsouza). Thank you very much. 🚀🚀🚀
