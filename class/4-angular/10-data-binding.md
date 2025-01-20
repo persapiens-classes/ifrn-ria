@@ -159,4 +159,4 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 
 - Create a angular project in Github.
 - Include a devcontainer to work with typescript. You can use [Ria Example](https://github.com/persapiens-classes/ifrn-ria-example), but remember to change the image to use typescript.
-- Create a insert, list, and remove crud operations of a model.
+- Create a insert, list, and remove crud operations of a model. Your model should have 3 attributes, including string, number, and boolean.
