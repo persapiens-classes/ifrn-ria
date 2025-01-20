@@ -139,24 +139,10 @@ In this example, the value of the `classCSS` property in the model is bound to t
 Class Binding and Style Binding are powerful Angular features for dynamically applying styles and classes in the template based on model properties. These functionalities make it easier and more efficient to develop interactive and reactive user interfaces, allowing you to create more dynamic applications with a better user experience.
 
 
-## Practice
-
-Here is a suggestion for the practice:
-
-**Project Theme**: To-Do List
-
-**Description**: Create templates for a To-Do List application where users can add, mark tasks as completed, and remove tasks. The application should be developed using the Angular framework, applying the concepts learned in the lesson.
-
-*Requirements*:
-
-- The application should have a main component representing the To-Do List.
-- The template should allow managing tasks (adding, marking as completed, removing).
-
-
 ## 👷 Task
 
 Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
 
 - Create a angular project in Github.
 - Include a devcontainer to work with typescript. You can use [Ria Example](https://github.com/persapiens-classes/ifrn-ria-example), but remember to change the image to use typescript.
-- Create a insert, list, and remove crud operations of a model. Your model should have 3 attributes, including string, number, and boolean.
+- Create a insert, list, and remove crud operations of a model in template. Your model should have 3 attributes, including string, number, and boolean.
