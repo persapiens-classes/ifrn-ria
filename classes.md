@@ -29,19 +29,19 @@ Classes
 
 10. [Data Binding](class/4-angular/10-data-binding.md)
 
-11. [Directive]
+11. [Directive](class/4-angular/11-directives.md)
 
-12. [Components]
+12. [Components](class/4-angular/12-components.md)
 
 13. [UI Components](class/4-angular/13-ui-components.md)
 
-14. [Service]
+14. [Service](class/4-angular/14-services.md)
 
-15. [Routes]
+15. [Routes](class/4-angular/15-routes.md)
 
-16. [Forms]
+16. [Forms](class/4-angular/16-forms.md)
 
-17. [HttpClient]
+17. [HttpClient](class/4-angular/17-http-client.md)
 
 18. [State Management]
 
