@@ -25,7 +25,7 @@ Classes
 
 8. [Basics](class/4-angular/08-basics.md)
 
-9. [Create Project using PrimeNg](class/4-angular/09-create-project.md)
+9. [Create Project](class/4-angular/09-create-project.md)
 
 10. [Data Binding](class/4-angular/10-data-binding.md)
 
@@ -33,7 +33,7 @@ Classes
 
 12. [Components](class/4-angular/12-components.md)
 
-13. [UI Components](class/4-angular/13-ui-components.md)
+13. [UI Components with PrimeNg](class/4-angular/13-ui-components.md)
 
 14. [Service](class/4-angular/14-services.md)
 
