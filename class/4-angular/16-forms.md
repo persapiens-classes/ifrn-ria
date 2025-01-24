@@ -113,3 +113,203 @@ Note: To work with reactive forms, you must import the `ReactiveFormsModule` in 
 ### Form Validation
 
 Form validation ensures that the user input is correct and valid. Angular provides ways to validate forms in both Template-Driven and Reactive (Model-Driven) modes.
+
+### Validation in Template-Driven Forms
+
+**Required Field Validation**
+
+```html
+<label for="name">Name:</label>
+<input type="text" id="name" name="name" #name="ngModel" ngModel required>
+<div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+  Name is required.
+</div>
+```
+
+Explanation:
+
+- We use the *required* directive to define that the field is mandatory.
+- We use the local variable *#name* to access the field's state in the template.
+- The expression **ngIf="name.invalid && (name.dirty || name.touched)"** checks if the field is invalid and has been touched or modified. If these conditions are met, the *div* element with the error message will be displayed.
+
+**Email Format Validation**
+
+```html
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" #email="ngModel" ngModel required email>
+<div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+  Enter a valid email.
+</div>
+```
+
+Explanation:
+
+- Besides the *required* directive, we use the *email* directive to validate the email format.
+- Similar to the previous example, we check if the field is invalid and has been touched or modified to display the error message.
+
+**Min and Max Length Validation**
+
+```html
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" #password="ngModel" ngModel minlength="6" maxlength="12" required>
+<div *ngIf="password.invalid && (password.dirty || password.touched)" class="error">
+  Password must be between 6 and 12 characters long.
+</div>
+```
+
+Explanation:
+
+- We add *#password="ngModel"* to declare the local variable *password* and associate it with ngModel.
+- The *minlength* and *maxlength* directives are used to define the password length limits.
+- If the password is shorter than 6 or longer than 12 characters, the validation is triggered, and the error message is displayed.
+
+**Field Comparison Validation (Password Confirmation)**
+
+```html
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" #password="ngModel" ngModel required>
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword" name="confirmPassword" #confirmPassword="ngModel" ngModel required [equalTo]="password">
+<div *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)" class="error">
+  Passwords do not match.
+</div>
+```
+
+Explanation:
+
+- We add *#confirmPassword="ngModel"* to declare the local variable *confirmPassword* and associate it with ngModel.
+- In the password confirmation field, we use the directive *[equalTo]="password"* to link the validation to the original password field.
+- A custom validation directive called *[equalTo]* is implemented to compare the field value with the original password value.
+
+---
+
+### Validation in Reactive Forms (Model-Driven)
+
+**Required Field Validation (Reactive)**
+
+```typescript
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-example',
+  template: `
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+
+      <div *ngIf="myForm.get('name').hasError('required') && myForm.get('name').touched" class="error">
+        Name is required.
+      </div>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+
+      <div *ngIf="myForm.get('email').hasError('required') && myForm.get('email').touched" class="error">
+        Enter a valid email.
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  `
+})
+export class ExampleComponent {
+  myForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.myForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', Validators.required]
+    });
+  }
+
+  submit() {
+    if (this.myForm.valid) {
+      // Logic to process the data
+    }
+  }
+}
+```
+
+Explanation:
+
+- We use *FormBuilder* to create a form group (*FormGroup*) named *myForm*. This group contains the form fields.
+- For the *"name"* field, we define a control with an initial empty value `''` and apply the required field validation (*Validators.required*).
+- Similarly, we do the same for the *"email"* field, applying the required field validation.
+
+**Email Format Validation (Reactive)**
+
+```typescript
+this.myForm = this.formBuilder.group({
+  email: ['', [Validators.required, Validators.email]]
+});
+```
+
+Explanation:
+
+- We create an *"email"* field within the *myForm* group.
+- An array of validators is used for this field. *Validators.required* ensures the field is filled, and *Validators.email* checks if the entered value is in a valid email format.
+
+**Min and Max Length Validation (Reactive)**
+
+```typescript
+this.myForm = this.formBuilder.group({
+  password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]]
+});
+```
+
+Explanation:
+
+- We create a *"password"* field within the *myForm* group.
+- A series of validators is used for this field. *Validators.required* ensures the field is filled, *Validators.minLength(6)* checks if the password has at least 6 characters, and *Validators.maxLength(12)* checks if the password has at most 12 characters.
+
+**Field Comparison Validation (Password Confirmation) (Reactive)**
+
+```typescript
+this.myForm = this.formBuilder.group({
+  password: ['', Validators.required],
+  confirmPassword: ['', [Validators.required, this.equalToValidator('password')]]
+});
+
+equalToValidator(otherControlName: string) {
+  return (control: AbstractControl): { [key: string]: any } | null => {
+    const otherControl = control.root.get(otherControlName);
+
+    if (otherControl && control.value !== otherControl.value) {
+      return { equalTo: true };
+    }
+
+    return null;
+  };
+}
+```
+
+Explanation:
+
+- We create two fields, *"password"* and *"confirmPassword"*, within the *myForm* group.
+- For the *"confirmPassword"* field, we apply a custom validation *this.equalToValidator('password')*. This function compares the field value with the *"password"* field value.
+- The *equalToValidator* function returns a custom validator that compares the two field values. If they are different, the validation returns *{ equalTo: true }*, indicating the passwords do not match.
+
+**Custom Validation (Reactive)**
+
+```typescript
+this.myForm = this.formBuilder.group({
+  username: ['', [Validators.required, this.customValidation]]
+});
+
+customValidation(control: AbstractControl): { [key: string]: any } | null {
+  if (control.value === 'admin') {
+    return { customValidation: true };
+  }
+
+  return null;
+}
+```
+
+Explanation:
+
+- We create a *"username"* field within the *myForm* group.
+- A custom validation *this.customValidation* is applied. This function checks if the entered value equals "*admin*".
+- If the value is "*admin*", the validation returns *{ customValidation: true }*, indicating a custom error.
+
+The official Angular documentation contains detailed information about validation directives and other form-related features. You can access Angular Forms documentation at [https://angular.io/api?query=valid](https://angular.io/api?query=valid).
