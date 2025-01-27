@@ -31,9 +31,9 @@ Classes
 
 11. [Directive](class/4-angular/11-directives.md)
 
-12. [Components](class/4-angular/12-components.md)
+12. [UI Components with PrimeNg](class/4-angular/12-ui-components.md)
 
-13. [UI Components with PrimeNg](class/4-angular/13-ui-components.md)
+13. [Components](class/4-angular/13-components.md)
 
 14. [Service](class/4-angular/14-services.md)
 
