@@ -37,7 +37,7 @@ Classes
 
 14. [Service](class/4-angular/14-services.md)
 
-15. [Routes](class/4-angular/15-routes.md)
+15. [Routers](class/4-angular/15-routers.md)
 
 16. [Forms](class/4-angular/16-forms.md)
 
