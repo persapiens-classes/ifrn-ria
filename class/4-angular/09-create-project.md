@@ -40,6 +40,12 @@ Now, you can start the development server to run the project:
 ng serve
 ```
 
+If you are running a devcontainer inside Windows, you should run the project with the following options:
+
+```bash
+ng serve --host 0.0.0.0 --port 4200 --poll 2000
+```
+
 Open your browser and visit http://localhost:4200/.  
 You should see the Angular application running.
 
