@@ -43,6 +43,8 @@ These libraries help accelerate the development of rich, interactive interfaces 
 
 Follow the steps [Download](https://primeng.org/installation#download) and [Provider](https://primeng.org/installation#provider) described in [PrimeNg Getting Started Installation](https://primeng.org/installation).
 
+Optionally, [install Prime Icons](https://primeng.org/icons).
+
 ## 👷 Task
 
 Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
