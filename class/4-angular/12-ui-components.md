@@ -51,7 +51,7 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 
 - Create an angular project in Github repository.
 - Choose and include an Angular UI Component Library to your project.
-- Create insert, update, detail, and list operations of a model using UI components in your app component.
+- Create insert, update, detail, remove, and list operations of a model using UI components in your app component.
 - Your model should have 3 at least attributes: string, number, and boolean.
 
 You can use [Ria Angular Example](https://github.com/persapiens-classes/ifrn-angular-ria-angular-example).
