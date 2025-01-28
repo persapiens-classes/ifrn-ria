@@ -40,7 +40,13 @@ Now, you can start the development server to run the project:
 ng serve
 ```
 
-If you are running a devcontainer inside Windows, you should run the project with the following options:
+If you are running a **devcontainer inside Linux**, you should run the project with the following options:
+
+```bash
+ng serve --host 0.0.0.0 --port 4200
+```
+
+If you are running a **devcontainer inside Windows**, you should run the project with the following options:
 
 ```bash
 ng serve --host 0.0.0.0 --port 4200 --poll 2000
