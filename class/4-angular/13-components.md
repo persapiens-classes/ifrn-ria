@@ -227,3 +227,10 @@ Remember that lifecycle events are optional, and you don't need to implement all
 
 In addition to the main Angular lifecycle methods such as `ngOnInit`, `ngOnChanges`, `ngDoCheck`, and `ngOnDestroy`, there are other methods like **ngAfterContentInit**, **ngAfterContentChecked**, **ngAfterViewInit**, and **ngAfterViewChecked** that provide opportunities to interact with projected content and the component's view. Understanding and utilizing these methods appropriately will enable you to control and optimize your component's logic across different lifecycle phases.
 
+## 👷 Task
+
+Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
+
+- Refactor that app component of the project in previous task (12-ui-components) to use dedicated insert, update, detail, remove, and list components.
+
+You can use [Ria Angular Example](https://github.com/persapiens-classes/ifrn-angular-ria-angular-example).

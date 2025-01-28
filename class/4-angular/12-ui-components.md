@@ -49,5 +49,9 @@ Optionally, [install Prime Icons](https://primeng.org/icons).
 
 Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
 
+- Create an angular project in Github repository.
 - Choose and include an Angular UI Component Library to your project.
-- Create/rewrite dedicated insert, update, detail, and list components of a model using UI componentes.
+- Create insert, update, detail, and list operations of a model using UI components in your app component.
+- Your model should have 3 at least attributes: string, number, and boolean.
+
+You can use [Ria Angular Example](https://github.com/persapiens-classes/ifrn-angular-ria-angular-example).
