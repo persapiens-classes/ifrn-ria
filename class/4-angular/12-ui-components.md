@@ -54,4 +54,4 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 - Create insert, update, detail, remove, and list operations of a model using UI components in your app component.
 - Your model should have 3 at least attributes: string, number, and boolean.
 
-You can use [Task Create insert and list of names with primeng](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/6) of Ria Angular Example.
+You can use [Task: Create insert and list of names with primeng](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/6) of Angular Example Project.
