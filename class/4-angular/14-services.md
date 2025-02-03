@@ -91,3 +91,11 @@ export class SharedDataService {
 ### **Summary**
 
 Services play a crucial role in Angular application development, enabling code reuse, separation of concerns, and efficient sharing of data and functionality between components. By creating and using services appropriately, you can develop a more modular, flexible, and scalable application architecture.
+
+## 👷 Task
+
+Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
+
+- Create services for your models and refactor the crud component of the project in the previous task (13 components) to use it.
+
+You can use task [Create owner service](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/12) of the Angular Example Project.
