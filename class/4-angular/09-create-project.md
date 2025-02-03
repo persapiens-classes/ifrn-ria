@@ -125,3 +125,7 @@ This is the basic structure of an Angular project. As you develop the applicatio
 
 - **_tsconfig.json_**: The _"tsconfig.json"_ file is the TypeScript configuration file, where you can define the TypeScript compiler settings for the project.
 
+
+## Hands on
+
+See [Angular Example Task.](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/1)
