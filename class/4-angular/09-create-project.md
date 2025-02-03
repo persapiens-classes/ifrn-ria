@@ -128,4 +128,4 @@ This is the basic structure of an Angular project. As you develop the applicatio
 
 ## Hands on
 
-See [Angular Example Task.](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/1)
+See [Task: Create Angular Project](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/1) of Angular Example App.
