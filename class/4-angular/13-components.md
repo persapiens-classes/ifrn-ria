@@ -233,4 +233,4 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 
 - Refactor that app component of the project in previous task (12-ui-components) to use dedicated insert, update, detail, remove, and list components.
 
-You can tasks [Create hello, insert and list components](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/8) and [Improve owner crud](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/10) of Ria Angular Example.
+You can use tasks [Create hello, insert and list components](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/8) and [Improve owner crud](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/10) of Angular Example Project.
