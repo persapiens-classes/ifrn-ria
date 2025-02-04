@@ -244,3 +244,11 @@ export class AuthenticationGuard implements CanActivate {
   }
 }
 ```
+
+## 👷 Task
+
+Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
+
+- Create routers to switch between inserting, updating, and listing components of your model project in the previous task (14 services) to use it.
+
+You can use task [Create owner service](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/14) of the Angular Example Project.
