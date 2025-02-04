@@ -251,4 +251,4 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 
 - Create routers to switch between inserting, updating, and listing components of your model project in the previous task (14 services) to use it.
 
-You can use task [Create owner service](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/14) of the Angular Example Project.
+You can use task [Add Router to Insert and List Components](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/14) of the Angular Example Project.
