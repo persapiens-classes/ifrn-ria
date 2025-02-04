@@ -48,68 +48,6 @@ Validation automatically occurs based on the directives applied to the input fie
 Note: To work with template-driven forms, you must import the `FormsModule` in the `app.module.ts` file.
 ```
 
-### Reactive Forms (Model-Driven)
-
-Reactive forms offer greater control and flexibility. They are programmatically built, and validation is defined in the TypeScript code.
-
-Example:
-
-```typescript
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
-@Component({
-  selector: 'app-example',
-  template: `
-    <form [formGroup]="myForm" (ngSubmit)="submit()">
-      <label for="name">Name:</label>
-      <input type="text" id="name" formControlName="name">
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" formControlName="email">
-
-      <button type="submit">Submit</button>
-    </form>
-  `
-})
-export class ExampleComponent {
-  myForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder) {
-    this.myForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]]
-    });
-  }
-
-  submit() {
-    if (this.myForm.valid) {
-      // Logic to process the data
-    }
-  }
-}
-```
-
-**Code Details:**
-
-- **import { FormBuilder, FormGroup, Validators } from '@angular/forms';** - Importing necessary modules to build and validate the reactive form.
-
-- **constructor(private formBuilder: FormBuilder) { ... }** - The `FormBuilder` service is injected in the component's constructor to simplify the creation of the reactive form.
-
-- **this.myForm = this.formBuilder.group({ ... })** - Using `FormBuilder` to create a `FormGroup` named `myForm`, where fields and their validations are defined.
-
-- **name: ['', Validators.required]** - Defining the *"name"* field with an initial empty value (`''`) and applying a required field validation.
-
-- **email: ['', [Validators.required, Validators.email]]** - Defining the *"email"* field with an initial empty value and applying two validations: required field and valid email format.
-
-- **(ngSubmit)="submit()"** - Binding the form's *ngSubmit* event to the `submit()` method, which is called when the "Submit" button is pressed.
-
-- **submit() { ... }** - This method is called when the form is submitted. We check if the form is valid using `this.myForm.valid`. If valid, logic to process form data can be added.
-
-```text
-Note: To work with reactive forms, you must import the `ReactiveFormsModule` in the `app.module.ts` file.
-```
-
 ### Form Validation
 
 Form validation ensures that the user input is correct and valid. Angular provides ways to validate forms in both Template-Driven and Reactive (Model-Driven) modes.
@@ -182,6 +120,68 @@ Explanation:
 - A custom validation directive called *[equalTo]* is implemented to compare the field value with the original password value.
 
 ---
+
+### Reactive Forms (Model-Driven)
+
+Reactive forms offer greater control and flexibility. They are programmatically built, and validation is defined in the TypeScript code.
+
+Example:
+
+```typescript
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-example',
+  template: `
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+
+      <button type="submit">Submit</button>
+    </form>
+  `
+})
+export class ExampleComponent {
+  myForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.myForm = this.formBuilder.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]]
+    });
+  }
+
+  submit() {
+    if (this.myForm.valid) {
+      // Logic to process the data
+    }
+  }
+}
+```
+
+**Code Details:**
+
+- **import { FormBuilder, FormGroup, Validators } from '@angular/forms';** - Importing necessary modules to build and validate the reactive form.
+
+- **constructor(private formBuilder: FormBuilder) { ... }** - The `FormBuilder` service is injected in the component's constructor to simplify the creation of the reactive form.
+
+- **this.myForm = this.formBuilder.group({ ... })** - Using `FormBuilder` to create a `FormGroup` named `myForm`, where fields and their validations are defined.
+
+- **name: ['', Validators.required]** - Defining the *"name"* field with an initial empty value (`''`) and applying a required field validation.
+
+- **email: ['', [Validators.required, Validators.email]]** - Defining the *"email"* field with an initial empty value and applying two validations: required field and valid email format.
+
+- **(ngSubmit)="submit()"** - Binding the form's *ngSubmit* event to the `submit()` method, which is called when the "Submit" button is pressed.
+
+- **submit() { ... }** - This method is called when the form is submitted. We check if the form is valid using `this.myForm.valid`. If valid, logic to process form data can be added.
+
+```text
+Note: To work with reactive forms, you must import the `ReactiveFormsModule` in the `app.module.ts` file.
+```
 
 ### Validation in Reactive Forms (Model-Driven)
 
