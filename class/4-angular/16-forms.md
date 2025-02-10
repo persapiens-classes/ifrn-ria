@@ -312,4 +312,18 @@ Explanation:
 - A custom validation *this.customValidation* is applied. This function checks if the entered value equals "*admin*".
 - If the value is "*admin*", the validation returns *{ customValidation: true }*, indicating a custom error.
 
-The official Angular documentation contains detailed information about validation directives and other form-related features. You can access Angular Forms documentation at [https://angular.io/api?query=valid](https://angular.io/api?query=valid).
+
+## :orange_book: Angular documentation
+
+
+[See official Angular documentation with detailed information about Form Validation](https://angular.dev/guide/forms).
+
+
+## 👷 Task
+
+Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
+
+- Create validation with Reactive Forms in inserting, and updating components of your model project in the previous task (15 services).
+
+You can use task [Insert component with form validation](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/16) of the Angular Example Project.
+
