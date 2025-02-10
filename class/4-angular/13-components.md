@@ -119,7 +119,7 @@ parentAction(event: string): void {
 ...
 ```
 
-For more details on component communication, refer to the Angular documentation at [https://angular.io/guide/inputs-outputs](https://angular.io/guide/inputs-outputs).
+For more details on component communication, refer to the Angular documentation about [inputs](https://angular.dev/guide/components/inputs) and  [outputs](https://angular.dev/guide/components/outputs).
 
 ---
 
