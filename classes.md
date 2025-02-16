@@ -41,8 +41,10 @@ Classes
 
 16. [Forms](class/4-angular/16-forms.md)
 
-17. [HttpClient](class/4-angular/17-http-client.md)
+17. [HttpClient](class/4-angular/17-backend-communication.md)
 
-18. [State Management]
+18. [HttpClient](class/4-angular/18-http-client.md)
+
+19. [State Management]
 
 :trophy: This angular classes was initially donated by [Professor Alessandro Sousa](https://github.com/alessandrojsouza). Thank you very much. 🚀🚀🚀
