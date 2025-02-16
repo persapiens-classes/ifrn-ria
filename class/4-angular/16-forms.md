@@ -325,5 +325,5 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 
 - Create validation with Reactive Forms in inserting, and updating components of your model project in the previous task (15 services).
 
-You can use task [Insert component with form validation](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/16) of the Angular Example Project.
+You can use task [Insert component with form validation](https://github.com/persapiens-classes/account-frontend/issues/16) of the Angular Example Project.
 

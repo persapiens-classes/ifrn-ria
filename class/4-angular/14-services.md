@@ -98,4 +98,4 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 
 - Create services for your models and refactor the crud component of the project in the previous task (13 components) to use it.
 
-You can use task [Create owner service](https://github.com/persapiens-classes/ifrn-ria-angular-example/issues/12) of the Angular Example Project.
+You can use task [Create owner service](https://github.com/persapiens-classes/account-frontend/issues/12) of the Angular Example Project.
