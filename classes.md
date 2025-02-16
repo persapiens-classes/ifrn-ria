@@ -41,7 +41,7 @@ Classes
 
 16. [Forms](class/4-angular/16-forms.md)
 
-17. [HttpClient](class/4-angular/17-backend-communication.md)
+17. [Backend Communication](class/4-angular/17-backend-communication.md)
 
 18. [HttpClient](class/4-angular/18-http-client.md)
 
