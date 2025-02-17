@@ -24,6 +24,8 @@
 
 [A web page may freely embed cross-origin images, stylesheets, scripts, iframes, and videos. Certain "cross-domain" requests, notably Ajax requests, are forbidden by default by the same-origin security policy. CORS defines a way in which a browser and server can interact to determine whether it is safe to allow the cross-origin request. It allows for more freedom and functionality than purely same-origin requests, but is more secure than simply allowing all cross-origin requests.](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
+See [Cors Configuration on Account Backend](https://github.com/persapiens-classes/account-backend/pull/170/files)
+
 
 ### HTTPS (Be careful if Backend and Angular Frontend running in different hosts)
 
