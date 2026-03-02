@@ -17,7 +17,7 @@ According to [Semaphoreci](https://semaphoreci.com/blog/cicd-pipeline)
 
 Let's use [Github Actions](https://docs.github.com/en/actions) to create a build pipeline of our project.
 
-Hands on with [RIA Example Project.](https://github.com/persapiens-classes/typescript-example/issues/15)
+Hands on with [Typescript Example Repository.](https://github.com/persapiens-classes/typescript-example/issues/15)
 
 ## :construction_worker: Task
 

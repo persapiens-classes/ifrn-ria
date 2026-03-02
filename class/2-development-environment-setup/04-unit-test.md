@@ -1,9 +1,8 @@
-Unit Test
-====
+# Unit Test
 
-> [**Unit testing** Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually scrutinized for proper operation. Software developers and sometimes QA staff complete unit tests during the development process.](https://www.techtarget.com/searchsoftwarequality/definition/unit-testing) 
+> [**Unit testing** Unit testing is a software development process in which the smallest testable parts of an application, called units, are individually scrutinized for proper operation. Software developers and sometimes QA staff complete unit tests during the development process.](https://www.techtarget.com/searchsoftwarequality/definition/unit-testing)
 
-## :star: Hands on with [RIA Example Project.](https://github.com/persapiens-classes/typescript-example/issues/8)
+## :star: Hands on with [Typescript Example Repository.](https://github.com/persapiens-classes/typescript-example/issues/8)
 
 ## :construction_worker: Task
 
