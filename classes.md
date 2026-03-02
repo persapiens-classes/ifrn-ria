@@ -21,19 +21,19 @@ Classes
 
 ### TypeScript (Portuguese)
 
-2. [Variables](https://drive.google.com/file/d/1gX7uzUfAWTdDUOOwGD5-08br0XVIdrZy/view?usp=classroom_web&authuser=6)
+1. [Variables](https://drive.google.com/file/d/1gX7uzUfAWTdDUOOwGD5-08br0XVIdrZy/view?usp=classroom_web&authuser=6)
 
-3. [Control Flow](https://drive.google.com/file/d/1H1pRvS6TaHKt_vNcPcpHLFZF3UyOfMo2/view?usp=classroom_web&authuser=6)
+2. [Control Flow](https://drive.google.com/file/d/1H1pRvS6TaHKt_vNcPcpHLFZF3UyOfMo2/view?usp=classroom_web&authuser=6)
 
-4. [Arrays](https://drive.google.com/file/d/1Lkzox-EIYL6WLHhZwl5LHk82jGmFA3Sk/view?usp=classroom_web&authuser=6)
+3. [Arrays](https://drive.google.com/file/d/1Lkzox-EIYL6WLHhZwl5LHk82jGmFA3Sk/view?usp=classroom_web&authuser=6)
 
-5. [Function and Array Functions](https://drive.google.com/file/d/1dxad_t0oWis1N56ZuVeKm3Basnkx48sT/view?usp=classroom_web&authuser=6)
+4. [Function and Array Functions](https://drive.google.com/file/d/1dxad_t0oWis1N56ZuVeKm3Basnkx48sT/view?usp=classroom_web&authuser=6)
 
-6. [Classes and Modules](https://drive.google.com/file/d/1G3G-2WmpwiN3UGmrcEULdUsnmjIxOedv/view?usp=classroom_web&authuser=6)
+5. [Classes and Modules](https://drive.google.com/file/d/1G3G-2WmpwiN3UGmrcEULdUsnmjIxOedv/view?usp=classroom_web&authuser=6)
 
-7. [DOM](https://drive.google.com/file/d/1n633yuBjQ8j-lonBNHdA4bKYyMDIOnUr/view?usp=classroom_web&authuser=6)
+6. [DOM](https://drive.google.com/file/d/1n633yuBjQ8j-lonBNHdA4bKYyMDIOnUr/view?usp=classroom_web&authuser=6)
 
-8. [JSON and Asynchonous Requests](https://drive.google.com/file/d/1PgrCSo2-B5nVj9QfSBWX4lXLPdFUZfgH/view?usp=classroom_web&authuser=6)
+7. [JSON and Asynchonous Requests](https://drive.google.com/file/d/1PgrCSo2-B5nVj9QfSBWX4lXLPdFUZfgH/view?usp=classroom_web&authuser=6)
 
 ### Angular
 
