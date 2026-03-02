@@ -16,7 +16,6 @@ Let's explore the [differences between TypeScript and JavaScript](https://www.ge
 
 ### TypeScript Setup
 
-
 ## :construction_worker: Task
 
 Create one pull request for your project according to [Task Submission Guidelines.](../../assessment.md#task-submission)

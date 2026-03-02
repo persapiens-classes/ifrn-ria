@@ -9,42 +9,56 @@ Classes
 
 ### Development Environment Setup 
 
-3. [Version Control](class/2-development-environment-setup/03-version-control.md)
+1. [TypeScript Example Repository](class/2-development-environment-setup/01-typescript-example.md)
 
-4. [Visual Code Dev Container and Github Codespaces](class/2-development-environment-setup/04-devcontainer.md)
+2. [Version Control](class/2-development-environment-setup/02-version-control.md)
 
-5. [Unit Test](class/2-development-environment-setup/05-unit-test.md)
+3. [Visual Code Dev Container and Github Codespaces](class/2-development-environment-setup/03-devcontainer.md)
 
-6. [CI/CD Pipeline](class/2-development-environment-setup/06-pipeline.md)
+4. [Unit Test](class/2-development-environment-setup/04-unit-test.md)
 
-7. [TypeScript Setup](class/2-development-environment-setup/07-typescript.md)
+5. [CI/CD Pipeline](class/2-development-environment-setup/05-pipeline.md)
 
-### TypeScript
+### TypeScript (Portuguese)
+
+2. [Variables](https://drive.google.com/file/d/1gX7uzUfAWTdDUOOwGD5-08br0XVIdrZy/view?usp=classroom_web&authuser=6)
+
+3. [Control Flow](https://drive.google.com/file/d/1H1pRvS6TaHKt_vNcPcpHLFZF3UyOfMo2/view?usp=classroom_web&authuser=6)
+
+4. [Arrays](https://drive.google.com/file/d/1Lkzox-EIYL6WLHhZwl5LHk82jGmFA3Sk/view?usp=classroom_web&authuser=6)
+
+5. [Function and Array Functions](https://drive.google.com/file/d/1dxad_t0oWis1N56ZuVeKm3Basnkx48sT/view?usp=classroom_web&authuser=6)
+
+6. [Classes and Modules](https://drive.google.com/file/d/1G3G-2WmpwiN3UGmrcEULdUsnmjIxOedv/view?usp=classroom_web&authuser=6)
+
+7. [DOM](https://drive.google.com/file/d/1n633yuBjQ8j-lonBNHdA4bKYyMDIOnUr/view?usp=classroom_web&authuser=6)
+
+8. [JSON and Asynchonous Requests](https://drive.google.com/file/d/1PgrCSo2-B5nVj9QfSBWX4lXLPdFUZfgH/view?usp=classroom_web&authuser=6)
 
 ### Angular
 
-8. [Basics](class/4-angular/08-basics.md)
+1. [Basics](class/4-angular/01-basics.md)
 
-9. [Create Project](class/4-angular/09-create-project.md)
+2. [Create Project](class/4-angular/02-create-project.md)
 
-10. [Data Binding](class/4-angular/10-data-binding.md)
+3. [Data Binding](class/4-angular/03-data-binding.md)
 
-11. [Directive](class/4-angular/11-directives.md)
+4. [Directive](class/4-angular/04-directives.md)
 
-12. [UI Components with PrimeNg](class/4-angular/12-ui-components.md)
+5. [UI Components with PrimeNg](class/4-angular/05-ui-components.md)
 
-13. [Components](class/4-angular/13-components.md)
+6. [Components](class/4-angular/06-components.md)
 
-14. [Service](class/4-angular/14-services.md)
+7. [Service](class/4-angular/07-services.md)
 
-15. [Routers](class/4-angular/15-routers.md)
+8. [Routers](class/4-angular/08-routers.md)
 
-16. [Forms](class/4-angular/16-forms.md)
+9. [Forms](class/4-angular/09-forms.md)
 
-17. [Backend Communication](class/4-angular/17-backend-communication.md)
+10. [Backend Communication](class/4-angular/10-backend-communication.md)
 
-18. [HttpClient](class/4-angular/18-http-client.md)
+11. [HttpClient](class/4-angular/11-http-client.md)
 
-19. [State Management]
+12. [State Management]
 
 :trophy: This angular classes was initially donated by [Professor Alessandro Sousa](https://github.com/alessandrojsouza). Thank you very much. 🚀🚀🚀
