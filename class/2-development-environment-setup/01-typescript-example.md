@@ -22,6 +22,6 @@ Create one pull request for your project according to [Task Submission Guideline
 
 Reimplement fatorial function with typescript types.
 
-Use can use [Typescript Example Project.](https://github.com/persapiens-classes/typescript-example)
+Use can use [Typescript Example Project](https://github.com/persapiens-classes/typescript-example) as template.
 
 Run the action with unit tests successfully.
