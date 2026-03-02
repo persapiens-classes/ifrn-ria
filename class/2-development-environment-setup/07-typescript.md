@@ -16,15 +16,13 @@ Let's explore the [differences between TypeScript and JavaScript](https://www.ge
 
 ### TypeScript Setup
 
-Use the [tutorial](https://blog.lsantos.dev/jest-com-typescript/) to configure typescript, including tests with jest. 
-
-Hands on with [RIA Example Project.](https://github.com/persapiens-classes/ifrn-ria-example/issues/18)
 
 ## :construction_worker: Task
 
 Create one pull request for your project according to [Task Submission Guidelines.](../../assessment.md#task-submission)
 
-Configure typescript like hands-on above.
 Reimplement fatorial function with typescript types.
+
+Use can use [Typescript Example Project.](https://github.com/persapiens-classes/typescript-example)
 
 Run the action with unit tests successfully.
