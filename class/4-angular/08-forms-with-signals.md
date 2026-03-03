@@ -102,7 +102,7 @@ Calling a field (for example, `loginForm.email()`) returns a `FieldState` with s
 
 ## :orange_book: Angular documentation
 
-[See official Angular documentation with detailed information about Form Validation](https://angular.dev/guide/forms).
+[See official Angular documentation with detailed information about Form with Signals](https://angular.dev/guide/forms/signals/overview).
 
 ## 👷 Task
 

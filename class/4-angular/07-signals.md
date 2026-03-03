@@ -88,7 +88,8 @@ export class MyComponent {
 
 ## :orange_book: Angular documentation
 
-[See official Angular documentation about Signals](https://angular.dev/guide/signals).
+- [Signals Essentials](https://angular.dev/essentials/signals)
+- [Signals Guide](https://angular.dev/guide/signals)
 
 ## 👷 Task
 

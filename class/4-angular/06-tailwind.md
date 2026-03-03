@@ -10,6 +10,39 @@ Instead of writing custom CSS with class names like `.btn-primary`, you use smal
 - **Safety**: Changes to one element won't accidentally break styles on other pages.
 - **Consistency**: Use a predefined design system (colors, spacing, typography).
 
+### Integration with Angular
+
+To use Tailwind CSS in an Angular project, you can use the automated setup or the manual method. For more details, see the [official Angular guide on Tailwind CSS](https://angular.dev/guide/tailwind).
+
+#### Automated Setup (Recommended)
+
+Run the following command in your project's root directory:
+
+```bash
+ng add tailwindcss
+```
+
+This command automatically installs the necessary packages, configures Tailwind, and adds the `@import` statement to your `styles.css`.
+
+#### Manual Setup
+
+If you prefer to set it up manually:
+
+1. **Install Tailwind CSS and its peer dependencies:**
+   ```bash
+   npm install tailwindcss @tailwindcss/postcss postcss
+   ```
+
+2. **Configure PostCSS:** Create a `.postcssrc.json` file in the project root:
+   ```json
+   { "plugins": { "@tailwindcss/postcss": {} } }
+   ```
+
+3. **Import Tailwind CSS:** Add the following to your `./src/styles.css`:
+   ```css
+   @import 'tailwindcss';
+   ```
+
 ### Common Utility Classes
 
 Tailwind provides thousands of classes. Here are some of the most common ones:
