@@ -31,21 +31,20 @@ Components are the building blocks of Angular. They control specific parts of th
 Angular component example:
 
 ```typescript
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-example', // Component selector used in templates
-  templateUrl: './example.component.html', // Path to the component's template
-  styleUrls: ['./example.component.scss'], // Associated style files
+  selector: "app-example", // Component selector used in templates
+  templateUrl: "./example.component.html", // Path to the component's template
+  styleUrls: ["./example.component.scss"], // Associated style files
 })
 export class ExampleComponent {
   // Component logic here...
 }
 ```
 
-
 2. **Templates**:  
-Templates are a vital part of Angular's architecture. They define the DOM structure to be rendered for a specific component. Templates are written in HTML and can include directives and bindings to display data and interact with the component's logic.
+   Templates are a vital part of Angular's architecture. They define the DOM structure to be rendered for a specific component. Templates are written in HTML and can include directives and bindings to display data and interact with the component's logic.
 
 Example of an Angular template:
 
@@ -56,9 +55,34 @@ Example of an Angular template:
 </ul>
 ```
 
+3. **Signals**:
+   Signals are a reactive primitive for managing state in Angular. A signal holds a value, and any template or computed signal that reads it is automatically updated when the value changes.
 
-3. **Directives**:
-Directives are instructions for the DOM. They can be used to modify the appearance, behavior, or structure of HTML. There are built-in directives such as **if** and **for**, and you can also create your own custom directives.
+Example of using signals in a component:
+
+```typescript
+import { Component, computed, signal } from "@angular/core";
+
+@Component({
+  selector: "app-example",
+  template: `
+    <p>Count: {{ count() }}</p>
+    <p>Double: {{ doubleCount() }}</p>
+    <button (click)="increment()">Increment</button>
+  `,
+})
+export class ExampleComponent {
+  count = signal(0);
+  doubleCount = computed(() => this.count() * 2);
+
+  increment() {
+    this.count.update((value) => value + 1);
+  }
+}
+```
+
+4. **Directives**:
+   Directives are instructions for the DOM. They can be used to modify the appearance, behavior, or structure of HTML. There are built-in directives such as **if** and **for**, and you can also create your own custom directives.
 
 Example of using directive @if in templates:
 
@@ -72,17 +96,16 @@ Example of using directive @if in templates:
 }
 ```
 
-
-4. **Services**:
-Services are classes that contain reusable logic and can be injected into components and other services. They are used to share data, make HTTP calls, perform asynchronous operations, and much more.
+5. **Services**:
+   Services are classes that contain reusable logic and can be injected into components and other services. They are used to share data, make HTTP calls, perform asynchronous operations, and much more.
 
 Example of an Angular service:
 
 ```typescript
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root', // Configuration to make the service available throughout the application.
+  providedIn: "root", // Configuration to make the service available throughout the application.
 })
 export class ExampleService {
   items: string[] = [];
@@ -96,25 +119,3 @@ export class ExampleService {
   }
 }
 ```
-
-
-5. **Modules**:
-Modules are used to organize code into functional and independent pieces. Every Angular application has at least one root module (usually called AppModule) that is responsible for initializing the application. Additionally, you can create modules to organize specific functionalities.
-
-Example of an Angular module:
-
-```typescript
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ExampleComponent } from './example.component';
-
-@NgModule({
-  declarations: [ExampleComponent], // Components declared in this module.
-  imports: [CommonModule], // Modules imported for use in this module.
-  exports: [ExampleComponent], // Components, directives, and pipes available to other modules.
-})
-export class ExampleModule { }
-
-```
-
-

@@ -65,16 +65,16 @@ project-name/
   |  |- app/
   |  |  |- components/
   |  |  |- services/
-  |  |  |- app.module.ts
+  |  |  |- app.config.ts
   |  |  |- app.component.ts
   |  |  |- app.component.html
-  |  |  |- app.component.scss
+  |  |  |- app.component.css
   |  |  |- app.component.spec.ts
   |  |- assets/
   |  |- environments/
   |  |- index.html
   |  |- main.ts
-  |  |- styles.scss
+  |  |- styles.css
   |- angular.json
   |- package.json
   |- tsconfig.json
@@ -83,7 +83,7 @@ project-name/
 
 ## Project Structure
 
-This is the basic structure of an Angular project. As you develop the application, other directories and files might be created to accommodate new components, services, modules, and so on. It's important to follow this organization to maintain a clean and well-structured Angular project, facilitating collaboration and maintenance.
+This is the basic structure of an Angular project. As you develop the application, other directories and files might be created to accommodate new components, services, and so on. It's important to follow this organization to maintain a clean and well-structured Angular project, facilitating collaboration and maintenance.
 
 **Explanation of the Structure**:
 
@@ -99,7 +99,7 @@ This is the basic structure of an Angular project. As you develop the applicatio
 
 - **_src/app/services/_**: In this directory, you can create and organize services used to share data and logic between components.
 
-- **_src/app/app.module.ts_**: The _"app.module.ts"_ file is the root module of the application. It imports and declares the components, services, and other modules used by the application.
+- **_src/app/app.config.ts_**: The _"app.config.ts"_ file is the root configuration of the application. It imports and declares the providers used by the application.
 
 - **_src/app/app.component.ts_**: The _"app.component.ts"_ file is the root component of the application, which controls the main template _"app.component.html"_ and the stylesheet _"app.component.css"_.
 
@@ -115,7 +115,7 @@ This is the basic structure of an Angular project. As you develop the applicatio
 
 - **_src/index.html_**: The _"index.html"_ file is the main HTML page of the application, where the Angular app is bootstrapped.
 
-- **_src/main.ts_**: The _"main.ts"_ file is the entry point of the Angular application. It calls the _platformBrowserDynamic().bootstrapModule()_ function to initialize the root module _"AppModule"_.
+- **_src/main.ts_**: The _"main.ts"_ file is the entry point of the Angular application. It calls the _platformBrowser().bootstrapApplicaiton()_ function to initialize the root component _"AppComponent"_.
 
 - **_src/styles.css_**: The _"styles.css"_ file is the global stylesheet for the application, defining styles that affect all components.
 
@@ -128,4 +128,4 @@ This is the basic structure of an Angular project. As you develop the applicatio
 
 ## Hands on
 
-See [Task: Create Angular Project](https://github.com/persapiens-classes/account-frontend/issues/1) of Angular Example App.
+See [Task: Create Angular Project](https://github.com/persapiens-classes/account-frontend/issues/1) of Account Frontend Example App.

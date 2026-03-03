@@ -144,5 +144,5 @@ Class Binding and Style Binding are powerful Angular features for dynamically ap
 Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
 
 - Create an angular project in Github.
-- Include a devcontainer to work with typescript. You can use [Ria Angular Example](https://github.com/persapiens-classes/ifrn-angular-ria-angular-example).
+- Include a devcontainer to work with typescript. You can use [Account Frontend Example](https://github.com/persapiens-classes/account-frontend).
 - Create an insert, list, and remove crud operations of a model in the template. Your model should have 3 attributes: string, number, and boolean.

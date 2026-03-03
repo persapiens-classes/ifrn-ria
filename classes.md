@@ -47,18 +47,22 @@ Classes
 
 5. [UI Components with PrimeNg](class/4-angular/05-ui-components.md)
 
-6. [Components](class/4-angular/06-components.md)
+6. Tailwind
 
-7. [Service](class/4-angular/07-services.md)
+7. Signals
 
-8. [Routers](class/4-angular/08-routers.md)
+8. [Forms with Signals](class/4-angular/08-forms-with-signals.md)
 
-9. [Forms](class/4-angular/09-forms.md)
+9. [Components](class/4-angular/09-components.md)
 
-10. [Backend Communication](class/4-angular/10-backend-communication.md)
+10. [Service](class/4-angular/10-services.md)
 
-11. [HttpClient](class/4-angular/11-http-client.md)
+11. [Routers](class/4-angular/11-routers.md)
 
-12. [State Management]
+12. [Backend Communication](class/4-angular/12-backend-communication.md)
+
+13. [HttpClient](class/4-angular/13-http-client.md)
+
+14. [JWT Authentication]
 
 :trophy: This angular classes was initially donated by [Professor Alessandro Sousa](https://github.com/alessandrojsouza). Thank you very much. 🚀🚀🚀

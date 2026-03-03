@@ -6,13 +6,13 @@ There are several visual component libraries that can be used in Angular project
    - **Description**: Angular Material is a component library developed by the Angular team, based on Material Design. It provides a collection of ready-to-use components such as buttons, tables, forms, menus, etc.
    - **Website**: [https://material.angular.io](https://material.angular.io)
 
-### 2. **NG Bootstrap**
-   - **Description**: NG Bootstrap provides Bootstrap-based UI components but without relying on jQuery or additional JavaScript. It is a modern alternative to Bootstrap for Angular projects.
-   - **Website**: [https://ng-bootstrap.github.io](https://ng-bootstrap.github.io)
-
-### 3. **PrimeNG**
+### 2. **PrimeNG**
    - **Description**: PrimeNG is a rich UI library with a wide range of components for Angular, such as tables, charts, calendars, menus, and more. It is known for its versatility and the large number of available components.
    - **Website**: [https://primeng.org/](https://primeng.org/)
+
+### 3. **NG Bootstrap**
+   - **Description**: NG Bootstrap provides Bootstrap-based UI components but without relying on jQuery or additional JavaScript. It is a modern alternative to Bootstrap for Angular projects.
+   - **Website**: [https://ng-bootstrap.github.io](https://ng-bootstrap.github.io)
 
 ### 4. **Clarity Design System**
    - **Description**: Clarity is a UI component library and design system developed by VMware. It offers a collection of components based on a design system, with a focus on user experience and accessibility.
@@ -54,4 +54,4 @@ Create pull requests for your project according to [Task Submission Guidelines.]
 - Create insert, update, detail, remove, and list operations of a model using UI components in your app component.
 - Your model should have 3 at least attributes: string, number, and boolean.
 
-You can use [Task: Create insert and list of names with primeng](https://github.com/persapiens-classes/account-frontend/issues/6) of Angular Example Project.
+You can use [Task: Create insert and list of names with primeng](https://github.com/persapiens-classes/account-frontend/issues/6) of Account Frontend Example Project.
