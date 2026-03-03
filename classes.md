@@ -47,9 +47,9 @@ Classes
 
 5. [UI Components with PrimeNg](class/4-angular/05-ui-components.md)
 
-6. Tailwind
+6. [Tailwind](class/4-angular/06-tailwind.md)
 
-7. Signals
+7. [Signals](class/4-angular/07-signals.md)
 
 8. [Forms with Signals](class/4-angular/08-forms-with-signals.md)
 

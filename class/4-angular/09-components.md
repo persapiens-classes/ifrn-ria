@@ -55,26 +55,31 @@ You can use a component within other components or templates by referencing the 
 
 ### **Communication Between Components**
 
-Components can communicate with each other through inputs and outputs.
+Components can communicate with each other through **inputs**, **outputs**, and **models**. Historically, Angular used the `@Input()` and `@Output()` decorators, but the modern approach uses **Signal-based APIs**.
 
 ---
 
 #### **Inputs:**
 
-Allow a parent component to pass data to a child component.
+Allow a parent component to pass data to a child component. Using the `input()` function creates an `InputSignal`.
 
 ```typescript
-import { Component, Input } from "@angular/core";
+import { Component, input } from "@angular/core";
 
 @Component({
   selector: "app-child",
-  template: "<p>{{ message }}</p>",
+  template: "<p>{{ message() }}</p>", // Signals are read as functions
 })
 export class ChildComponent {
-  @Input() message: string;
+  // Optional input with a default value
+  message = input("Default message");
+  
+  // Required input without a default value
+  // id = input.required<string>();
 }
 ```
 
+Usage in Parent:
 ```html
 <app-child [message]="parentMessage"></app-child>
 ```
@@ -83,19 +88,19 @@ export class ChildComponent {
 
 #### **Outputs:**
 
-Allow a child component to emit events to a parent component.
+Allow a child component to emit events to a parent component using the `output()` function.
 
 **Child Component Configuration:**
 
 ```typescript
-import { Component, Output, EventEmitter } from "@angular/core";
+import { Component, output } from "@angular/core";
 
 @Component({
   selector: "app-child",
   template: '<button (click)="onClickSend()">Send Message</button>',
 })
 export class ChildComponent {
-  @Output() messageOutEvent = new EventEmitter<string>();
+  messageOutEvent = output<string>();
 
   onClickSend() {
     this.messageOutEvent.emit("Message from Child");
@@ -119,81 +124,60 @@ parentAction(event: string): void {
 ...
 ```
 
-For more details on component communication, refer to the Angular documentation about [inputs](https://angular.dev/guide/components/inputs) and  [outputs](https://angular.dev/guide/components/outputs).
+---
+
+#### **Model Inputs (Two-Way Binding):**
+
+The `model()` function creates a special input that supports two-way binding.
+
+```typescript
+import { Component, model } from "@angular/core";
+
+@Component({
+  selector: "app-custom-checkbox",
+  template: '<input type="checkbox" [checked]="checked()" (change)="toggle()">',
+})
+export class CustomCheckboxComponent {
+  checked = model(false);
+
+  toggle() {
+    this.checked.set(!this.checked());
+  }
+}
+```
+
+Usage in Parent (supports `[(checked)]` syntax):
+```html
+<app-custom-checkbox [(checked)]="isAdmin"></app-custom-checkbox>
+```
 
 ---
 
 ### **Component Lifecycle**
 
-The lifecycle of an Angular component consists of a series of events that occur from its creation to its destruction. Each event provides an opportunity to perform specific actions at key moments during the component's lifespan.
+The lifecycle of an Angular component consists of a series of events that occur from its creation to its destruction.
 
-Here are the main lifecycle events of a component, along with examples demonstrating how to use them:
+**Important Note on Signal Inputs:**
+Signal-based inputs (`input()`, `model()`) are automatically reactive. Instead of using `ngOnChanges`, you should prefer using `computed()` or `effect()` to react to input changes.
 
 ---
 
 #### **ngOnInit**
 
-The `ngOnInit` event is triggered right after a component is initialized. It's a good place to perform initializations, such as fetching data from a service or setting up variables.
+The `ngOnInit` event is triggered right after a component is initialized.
 
 ```typescript
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, signal } from "@angular/core";
 
 @Component({
   selector: "app-example",
-  template: "<p>{{ message }}</p>",
+  template: "<p>{{ message() }}</p>",
 })
 export class ExampleComponent implements OnInit {
-  message: string;
+  message = signal("");
 
   ngOnInit() {
-    this.message = "Hello, world!";
-  }
-}
-```
-
----
-
-#### **ngOnChanges**
-
-The `ngOnChanges` event is triggered whenever an input value (`@Input`) changes. It provides an object containing the detected changes.
-
-```typescript
-import { Component, Input, OnChanges, SimpleChanges } from "@angular/core";
-
-@Component({
-  selector: "app-child",
-  template: "<p>{{ message }}</p>",
-})
-export class ChildComponent implements OnChanges {
-  @Input() message: string;
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes.message) {
-      console.log("Message value changed to:", changes.message.currentValue);
-    }
-  }
-}
-```
-
----
-
-#### **ngDoCheck**
-
-The `ngDoCheck` event is triggered whenever change detection is executed. It can be used to perform manual change checks.
-
-```typescript
-import { Component, DoCheck } from "@angular/core";
-
-@Component({
-  selector: "app-example",
-  template: "<p>{{ counter }}</p>",
-})
-export class ExampleComponent implements DoCheck {
-  counter: number = 0;
-
-  ngDoCheck() {
-    console.log("ngDoCheck executed.");
-    // Logic for manual change detection here...
+    this.message.set("Hello, world!");
   }
 }
 ```
@@ -202,7 +186,7 @@ export class ExampleComponent implements DoCheck {
 
 #### **ngOnDestroy**
 
-The `ngOnDestroy` event is triggered when a component is about to be destroyed. It is used to perform cleanup actions, such as canceling subscriptions or disconnecting from services.
+The `ngOnDestroy` event is triggered when a component is about to be destroyed. Used for cleanup.
 
 ```typescript
 import { Component, OnDestroy } from "@angular/core";
@@ -214,23 +198,19 @@ import { Component, OnDestroy } from "@angular/core";
 export class ExampleComponent implements OnDestroy {
   ngOnDestroy() {
     console.log("Component destroyed.");
-    // Cleanup actions here...
   }
 }
 ```
 
 ---
 
-**Note:**
-
-Remember that lifecycle events are optional, and you don't need to implement all of them in every component. Choose the events that are relevant to what you want to achieve and use them as needed.
-
-In addition to the main Angular lifecycle methods such as `ngOnInit`, `ngOnChanges`, `ngDoCheck`, and `ngOnDestroy`, there are other methods like **ngAfterContentInit**, **ngAfterContentChecked**, **ngAfterViewInit**, and **ngAfterViewChecked** that provide opportunities to interact with projected content and the component's view. Understanding and utilizing these methods appropriately will enable you to control and optimize your component's logic across different lifecycle phases.
+For more details on component communication, refer to the Angular documentation about [inputs](https://angular.dev/guide/components/inputs) and [outputs](https://angular.dev/guide/components/outputs).
 
 ## 👷 Task
 
 Create pull requests for your project according to [Task Submission Guidelines.](../assessment.md#task-submission)
 
-- Refactor that app component of the project in previous task (12-ui-components) to use dedicated insert, update, detail, remove, and list components.
+- Refactor the app component of the project in previous task (08-forms-with-signals) to use dedicated insert, update, detail, remove, and list components.
+- Ensure that all component communication (inputs and outputs) uses the new signal-based APIs (`input()`, `output()`, `model()`).
 
 You can use tasks [Create hello, insert and list components](https://github.com/persapiens-classes/account-frontend/issues/8) and [Improve owner crud](https://github.com/persapiens-classes/account-frontend/issues/10) of Account Frontend Example Project.
