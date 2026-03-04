@@ -1,5 +1,4 @@
-Classes
-====
+# Classes
 
 ### Introduction
 
@@ -7,7 +6,7 @@ Classes
 
 2. [Applications with Rich Interfaces](class/1-introduction/02-applications-with-rich-interfaces.md)
 
-### Development Environment Setup 
+### Development Environment Setup
 
 1. [TypeScript Example Repository](class/2-development-environment-setup/01-typescript-example.md)
 
@@ -63,6 +62,6 @@ Classes
 
 13. [HttpClient](class/4-angular/13-http-client.md)
 
-14. [JWT Authentication]
+14. [JWT Authentication](class/4-angular/14-jwt-authentication.md)
 
 :trophy: This angular classes was initially donated by [Professor Alessandro Sousa](https://github.com/alessandrojsouza). Thank you very much. 🚀🚀🚀
