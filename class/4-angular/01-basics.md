@@ -51,7 +51,9 @@ Example of an Angular template:
 ```html
 <h2>Item List</h2>
 <ul>
-  <li *ngFor="let item of items">{{ item }}</li>
+  @for (item of items; track item) {
+    <li>{{ item }}</li>
+  }
 </ul>
 ```
 
