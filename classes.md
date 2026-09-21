@@ -44,7 +44,7 @@
 
 4. [Directive](class/4-angular/04-directives.md)
 
-5. [UI Components with PrimeNg](class/4-angular/05-ui-components.md)
+5. [UI Components with OptimusUI](class/4-angular/05-ui-components.md)
 
 6. [Tailwind](class/4-angular/06-tailwind.md)
 
