@@ -8,7 +8,7 @@ There are several visual component libraries that can be used in Angular project
 
 ### 2. **OptimusUI**
    - **Description**: OptimusUI is a rich UI library with a wide range of components for Angular, such as tables, charts, calendars, menus, and more. It is known for its versatility and the large number of available components.
-   - **Website**: [[https://primeng.org/](https://optimus.openng.org/)]([https://primeng.org/](https://optimus.openng.org/))
+   - **Website**: [https://optimus.openng.org/](https://optimus.openng.org/)
 
 ### 3. **NG Bootstrap**
    - **Description**: NG Bootstrap provides Bootstrap-based UI components but without relying on jQuery or additional JavaScript. It is a modern alternative to Bootstrap for Angular projects.
