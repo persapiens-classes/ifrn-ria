@@ -1,5 +1,24 @@
 # Create Angular project with PrimeNg
 
+## Installing Pnpm on Windows
+
+1. Open powershell
+
+```bash
+Invoke-WebRequest https://get.pnpm.io/install.ps1 -UseBasicParsing | Invoke-Expression
+```
+
+2. Close and open powershell
+
+3. Install node inside pnpm
+
+```bash
+pnpm runtime set node 26 -g
+```
+
+5. Close and open powershell
+
+
 ## Installing Angular CLI
 
 Before we start creating an Angular project, let's install Angular CLI, a command-line interface that simplifies Angular application development.
@@ -9,7 +28,7 @@ Before we start creating an Angular project, let's install Angular CLI, a comman
 2. Run the following command to install Angular CLI globally on your system:
 
 ```bash
-npm install -g @angular/cli
+pnpm install -g @angular/cli
 ```
 
 ## Creating a New Angular Project
@@ -21,7 +40,7 @@ Choose the directory where you want to create the project and navigate to it in 
 Run the following command to create a new Angular project:
 
 ```bash
-ng new project-name
+pnpm ng new hello
 ```
 
 The Angular CLI will ask some questions about the project configuration. You can choose to configure them according to your needs or simply press "Enter" to use the default settings.
@@ -31,25 +50,26 @@ Wait until the creation process is completed. The Angular CLI will create the ba
 Navigate to the directory of the newly created project:
 
 ```bash
-cd project-name
+cd hello
+pnpm approve-builds
 ```
 
 Now, you can start the development server to run the project:
 
 ```bash
-ng serve
+pnpm start
 ```
 
 If you are running a **devcontainer inside Linux**, you should run the project with the following options:
 
 ```bash
-ng serve --host 0.0.0.0 --port 4200
+pnpm ng serve --host 0.0.0.0 --port 4200
 ```
 
 If you are running a **devcontainer inside Windows**, you should run the project with the following options:
 
 ```bash
-ng serve --host 0.0.0.0 --port 4200 --poll 2000
+pnpm ng serve --host 0.0.0.0 --port 4200 --poll 2000
 ```
 
 Open your browser and visit http://localhost:4200/.  
