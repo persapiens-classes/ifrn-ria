@@ -1,15 +1,6 @@
-## Angular Directives
+## Angular Control Flow Syntax and Directives
 
-Directives are a fundamental part of Angular, allowing you to extend HTML syntax to **add custom behaviors** to page elements.
-
-There are three main types of directives in Angular:
-
-- Structural Directives  
-- Component Directives  
-
-#### Structural Directives
-
-Structural Directives manipulate the DOM structure by adding or removing HTML elements from the template. They are applied as structural attributes on HTML elements.
+#### Control Flow Syntax
 
 Starting with Angular 17, a new syntax for flow control in templates was introduced, replacing traditional structural directives like \*ngIf, \*ngFor, and \*ngSwitch. This new approach uses @if, @for, and @switch syntax, providing a more intuitive and JavaScript-like way to express conditional and loop logic in templates.
 
@@ -44,6 +35,8 @@ Example of @if, @for, @switch:
 ```
 
 #### Custom Directive
+
+Directives are a fundamental part of Angular, allowing you to extend HTML syntax to **add custom behaviors** to page elements.
 
 You can also create your own custom Directives in Angular. To do this, you need to use the @Directive decorator and implement the required logic for the directive.
 
@@ -92,7 +85,4 @@ ng generate directive <directiveName>
 [Official Documentation for Building Directives - Module-Based Project](https://angular.dev/guide/directives/attribute-directives)
 
 ---
-
-## Final Considerations
-
-Directives are a powerful and versatile feature in Angular, allowing you to create custom and reusable behaviors in templates. By combining Directives with other Angular features like Data Binding and Services, you can build more interactive and dynamic web applications, facilitating the maintenance and development of rich user interfaces.
+combining Directives with other Angular features like Data Binding and Services, you can build more interactive and dynamic web applications, facilitating the maintenance and development of rich user interfaces.
