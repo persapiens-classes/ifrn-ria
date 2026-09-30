@@ -46,23 +46,7 @@ Example:
 
 **How to enable Two-Way Binding?**
 
-To use *Two-Way Binding*, import the **FormsModule** in your main module (usually *app.module.ts*). Make sure the import is correctly included in the imports array of the NgModule:
-
-```typescript
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
-
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, FormsModule], // Add FormsModule here
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
-```
+To use *Two-Way Binding*, import the **FormsModule** in your component. Make sure the import is correctly included in the imports array of the Component.
 
 **Data Binding Notes**
 
