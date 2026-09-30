@@ -37,13 +37,13 @@ There are several visual component libraries that can be used in Angular project
 These libraries help accelerate the development of rich, interactive interfaces in Angular by providing ready-made and customizable components. The choice of which one to use depends on the needs of your project and design preferences.
 
 
-## Install PrimeNg
+## Install OptimusUI
 
-[PrimeNg](https://primeng.org) is a comprehensive suite of customizable, feature-rich UI components.
+[OptimusUi](https://github.com/openng-org/optimus-ui) is a comprehensive suite of customizable, feature-rich UI components.
 
-Follow the steps [Download](https://primeng.org/installation#download) and [Provider](https://primeng.org/installation#provider) described in [PrimeNg Getting Started Installation](https://primeng.org/installation).
+Follow the steps described in [OptimusUi Getting Started Installation](https://optimus.openng.org/installation).
 
-Optionally, [install Prime Icons](https://primeng.org/icons).
+Optionally, [install OptimusUi Icons](https://optimus.openng.org/icons).
 
 ## 👷 Task
 
