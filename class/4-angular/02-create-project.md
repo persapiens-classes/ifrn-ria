@@ -47,10 +47,11 @@ The Angular CLI will ask some questions about the project configuration. You can
 
 Wait until the creation process is completed. The Angular CLI will create the basic project structure and install the necessary dependencies.
 
-Navigate to the directory of the newly created project:
+Navigate to the directory of the newly created project and finish pnpm configuration:
 
 ```bash
 cd hello
+pnpm runtime set node 26
 pnpm approve-builds
 ```
 
