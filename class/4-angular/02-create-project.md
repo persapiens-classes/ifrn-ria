@@ -5,7 +5,7 @@
 1. Open powershell
 
 ```bash
-Invoke-WebRequest https://get.pnpm.io/install.ps1 -UseBasicParsing | Invoke-Expression
+irm https://get.pnpm.io/ps1 | iex
 ```
 
 2. Close and open powershell
