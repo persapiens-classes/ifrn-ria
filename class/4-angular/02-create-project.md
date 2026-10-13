@@ -1,4 +1,4 @@
-# Create Angular project with PrimeNg
+# Create Angular project with OptimusUi
 
 ## Installing Pnpm on Windows
 
