@@ -2,8 +2,6 @@
 
 Handling user input with forms is central to most applications. Angular provides **Signal Forms** to manage form state with signals and keep the UI synchronized with the model.
 
-> IMPORTANT: Signal Forms are experimental. The API may change in future releases.
-
 ### Forms with Signals (Signal Forms)
 
 Signal Forms start with a model signal, then you create a field tree using `form()`, and bind inputs with the `[formField]` directive.
