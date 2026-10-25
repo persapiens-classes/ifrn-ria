@@ -15,11 +15,9 @@ ng generate service service-name
 **Example of a Service:**
 
 ```typescript
-import { Injectable } from '@angular/core';
+import { Service } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root', // Indicates that the service will be injected at the root level (singleton).
-})
+@Service()
 export class MyService {
   data: string[] = [];
 
@@ -42,7 +40,7 @@ Services can be injected into components, modules, or other services using Angul
 **Example of Service Injection in a Component:**
 
 ```typescript
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MyService } from './my-service.service';
 
 @Component({
@@ -50,38 +48,10 @@ import { MyService } from './my-service.service';
   template: '<button (click)="add()">Add Data</button>',
 })
 export class ExampleComponent {
-  constructor(private myService: MyService) {}
+  myService: inject(MyService);
 
   add() {
     this.myService.addData('New data');
-  }
-}
-```
-
----
-
-### **Using Services to Share Data**
-
-Services are excellent for sharing data and state between components. They act as intermediaries, allowing one component to update the data and notifying other components of these changes.
-
-**Example of Using a Service to Share Data:**
-
-```typescript
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-
-@Injectable({
-  providedIn: 'root',
-})
-export class SharedDataService {
-  private dataSubject = new BehaviorSubject<string>('');
-
-  updateData(data: string) {
-    this.dataSubject.next(data);
-  }
-
-  getData() {
-    return this.dataSubject.asObservable();
   }
 }
 ```
