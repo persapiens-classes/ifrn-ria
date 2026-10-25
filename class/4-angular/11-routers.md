@@ -1,68 +1,18 @@
 ### **Angular Router**
 
-Routing is a key part of many modern web applications, enabling users to navigate between different sections of the app without reloading the page. Angular offers a robust routing module that simplifies navigation between components and views.
-
----
-
-### **Creating the Routing Module**
-
-You need to create the routing module, `_AppRoutingModule_`, and define the application's routes in it. If this module was not created during project initialization, execute the following command:
-
-```bash
-ng generate module app-routing --flat --module=app
-```
+Routing is a key part of modern web applications, enabling users to navigate between different sections of the app without reloading the page. Modern Angular uses a standalone-first architecture, where routing is configured via providers (provideRouter).
 
 ---
 
 ### **Setting Up Routing**
 
-There are three fundamental steps to creating a route:
+In modern Angular applications, routes are configured in `app.routes.ts` and provided in `app.config.ts`.
 
 ---
 
-1. **Import the Routing Module in the `_app.module.ts_` file**
+1. **Define Routes in `app.routes.ts`**
 
-Import the **AppRoutingModule** into the **AppModule** and add it to the imports array.
-
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module'; // Import AppRoutingModule
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule, // Add AppRoutingModule to the imports array
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
-```
-
----
-
-2. **Import `RouterModule` and `Routes` into your routing module (`_AppRoutingModule_`)**
-
-```typescript
-import { RouterModule, Routes } from '@angular/router'; // Import RouterModule and Routes
-
-const routes: Routes = []; // Array of routes
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
-```
-
----
-
-3. **Define routes in the `Routes` array**
-
-Each route in the array is a JavaScript object with two properties. The first, **path**, defines the URL path for the route. The second, **component**, specifies the Angular component to use for the corresponding path.
+Routes are defined using the Routes type. You can load components eagerly or lazily using loadComponent:
 
 ```typescript
 const routes: Routes = [
@@ -74,9 +24,58 @@ const routes: Routes = [
 
 ---
 
+2. **Provide the Router in `app.config.ts`**
+
+Register the routes using `provideRouter`. Enabling `withComponentInputBinding()` is standard practice, as it binds route parameters and query parameters directly to component inputs:
+
+```typescript
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideRouter(routes, withComponentInputBinding()),
+  ],
+};
+```
+
+---
+
+3. Displaying Routes in Standalone Components
+
+Import `RouterOutlet` and `RouterLink` directly into the component that hosts navigation:
+
+```typescript
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
+  template: `
+    <nav>
+      <a routerLink="/">Home</a>
+      <a routerLink="/about">About</a>
+      <a routerLink="/contact">Contact</a>
+    </nav>
+
+    <main>
+      <router-outlet />
+    </main>
+  `,
+})
+export class AppComponent {}
+```
+
+---
+
+
 ### **Navigating Between Routes**
 
-Navigation between routes can be achieved using the `_routerLink_` directive in templates or the `_Router_` service in code.
+Declarative Navigation with `RouterLink`.
 
 **Using `routerLink` in a Template**
 
@@ -99,7 +98,7 @@ import { Router } from '@angular/router';
 
 // ...
 
-constructor(private router: Router) {}
+router = inject(Router);
 
 navigateToAbout() {
   this.router.navigate(['/about']);
@@ -125,7 +124,7 @@ import { ActivatedRoute } from '@angular/router';
 
 // ...
 
-constructor(private route: ActivatedRoute) {}
+route = inject(ActivatedRoute);
 
 ngOnInit() {
   this.route.paramMap.subscribe(params => {
@@ -172,7 +171,7 @@ import { ActivatedRoute } from '@angular/router';
 2. Access the Query Parameters:
 
 ```typescript
-constructor(private route: ActivatedRoute) {}
+route = inject(ActivatedRoute)
 
 ngOnInit() {
   this.route.queryParams.subscribe(params => {
@@ -190,7 +189,7 @@ import { Router } from '@angular/router';
 
 // ...
 
-constructor(private router: Router) {}
+router = inject(Router);
 
 navigateWithQueryParams() {
   const queryParams = {
@@ -235,9 +234,7 @@ Route guards allow you to control access to routes based on specific conditions,
 ```typescript
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Service()
 export class AuthenticationGuard implements CanActivate {
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree {
     // Authentication logic here

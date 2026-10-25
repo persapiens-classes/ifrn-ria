@@ -20,11 +20,11 @@
 ```typescript
 import { HttpClient } from '@angular/common/http';
 
-constructor(private http: HttpClient) { }
+http = inject(HttpClient);
 ```
 
 - To use HttpClient, first import it from the **@angular/common/http** module.
-- Then, inject it as a dependency in the constructor of a component or service.
+- Then, inject it as a dependency in the component or service.
 - Now you can use *this.http* to make HTTP requests in your application.
 
 See [Angular HttpClient Official Reference.](https://angular.dev/guide/http)

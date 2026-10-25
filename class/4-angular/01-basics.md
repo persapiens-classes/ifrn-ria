@@ -104,11 +104,9 @@ Example of using directive @if in templates:
 Example of an Angular service:
 
 ```typescript
-import { Injectable } from "@angular/core";
+import { Service } from "@angular/core";
 
-@Injectable({
-  providedIn: "root", // Configuration to make the service available throughout the application.
-})
+@Service()
 export class ExampleService {
   items: string[] = [];
 
