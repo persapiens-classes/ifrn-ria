@@ -50,9 +50,9 @@
 
 7. [Signals](class/4-angular/07-signals.md)
 
-8. [Forms with Signals](class/4-angular/08-forms-with-signals.md)
+8. [Components](class/4-angular/08-components.md)
 
-9. [Components](class/4-angular/09-components.md)
+9. [Forms with Signals](class/4-angular/09-forms-with-signals.md)
 
 10. [Service](class/4-angular/10-services.md)
 
