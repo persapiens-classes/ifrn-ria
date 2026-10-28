@@ -88,7 +88,7 @@ Declarative Navigation with `RouterLink`.
 **Displaying Routes in the Template**
 
 ```html
-  <router-outlet/>
+  <router-outlet />
 ```
 
 **Programmatic Navigation with `_Router_`**
