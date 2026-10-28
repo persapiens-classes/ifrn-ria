@@ -26,17 +26,17 @@ const routes: Routes = [
 
 2. **Provide the Router in `app.config.ts`**
 
-Register the routes using `provideRouter`. Enabling `withComponentInputBinding()` is standard practice, as it binds route parameters and query parameters directly to component inputs:
+Register the routes using `provideRouter`:
 
 ```typescript
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, withComponentInputBinding } from '@angular/router';
+import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes, withComponentInputBinding()),
+    provideBrowserGlobalErrorListeners(),
+    provideRouter(routes),
   ],
 };
 ```
